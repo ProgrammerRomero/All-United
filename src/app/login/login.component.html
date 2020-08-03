@@ -1,0 +1,22 @@
+
+
+<FlexboxLayout>
+    <StackLayout class="form" [class.dark]="!isLogginIn">
+        <!-- <Image src="~/images/logo.png"></Image> -->
+        <TextField hint="ROMERO :D"
+                    keyboardType="email"
+                    autocorrect="false"
+                    autocapitalizationType="none"
+                    [(nghModel)]="user.password" class="input inputborder">
+        </TextField>
+        <TextField hint="Password"
+                    secure="true"
+                    [(nghModel)]="user.password" class="input inputborder">
+        </TextField>
+
+        <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'"
+                class="btn btn-primary" (tap)="submit()"></Button>
+        <Button [text]="isLoggingIn ? 'Sign up' : 'Back'" (tap)="toggleDisplay()"></Button>
+    </StackLayout>
+</FlexboxLayout>
+
